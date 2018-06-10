@@ -10,9 +10,6 @@ const API_KEY = require('../apiKeys.js').youtube;
 
 
 
-YTSearch({key: API_KEY, term: 'surfboards'}, function(data){
-    console.log(data);
-});
 
 
 
@@ -20,6 +17,18 @@ YTSearch({key: API_KEY, term: 'surfboards'}, function(data){
 // This component should produce some html
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            videos: []
+        };
+
+        YTSearch({key: API_KEY, term: 'surfboards'}, videos => {
+            this.setState({ videos })
+        });
+
+    }
     render() {
         return (
             <div>
