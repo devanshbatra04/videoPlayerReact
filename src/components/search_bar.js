@@ -4,9 +4,7 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
     // not used render: function() {} instead,
     render() {
-        render(){
-            return <input/>
-        }
+            return <input />;
     }
 }
 
