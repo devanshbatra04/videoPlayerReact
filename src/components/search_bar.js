@@ -4,7 +4,10 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
     // not used render: function() {} instead,
     render() {
-            return <input />;
+            return <input onChange={this.onInputChange} />;
+    }
+    onInputChange() {
+
     }
 }
 
